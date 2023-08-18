@@ -16,13 +16,13 @@ from django.contrib.auth.models import User
 class PaletteList(generics.ListCreateAPIView):
     queryset = Palette.objects.all()
     serializer_class = PaletteSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    #permission_classes = [IsAuthenticatedOrReadOnly]
 
 ### Favoritelist api
 class FavoriteList(generics.ListCreateAPIView):
     queryset = Favorite.objects.all()
     serializer_class = FavoriteSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    #permission_classes = [IsAuthenticatedOrReadOnly]
 
 ### User registration
 class UserRegistration(APIView):
